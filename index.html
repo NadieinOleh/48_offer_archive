@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>LeadPanda agency</title>
+
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/normolize.css" />
+    <link rel="stylesheet" href="./css/sectionQuiz.css" />
+    <link rel="stylesheet" href="./css/ratio.css" />
+    <link rel="stylesheet" href="./css/quiz-form.css" />
+    <link rel="stylesheet" href="./css/mainMob.css" />
+    <link
+      rel="stylesheet"
+      href="https://qqqq.uno/FormGlfin/leadFinalForm.css"
+    />
+    <link rel="stylesheet" href="css/leadform.css" />
+  </head>
+
+  <body>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+
+    <main class="main">
+      <img class="main__logo" src="./images/logo2.svg" alt="logoPanda" />
+
+      <div class="main__image"></div>
+      <h2 class="main__title">
+        BOOST
+
+        <span class="main__title--second">YOUR</span>
+
+        <span class="main__title--third">BUSINESS</span>
+      </h2>
+
+      <div class="main__block">
+        <div class="main__leadPandaBg"></div>
+
+        <div>
+          <h2 class="main__subTitle">
+            Boost Your Sales with Targeted Advertising from Lead Panda Agency!
+          </h2>
+          <p class="main__text">
+            Start receiving your first leads within the first 48 hours.
+          </p>
+          <button onclick="showQuiz1()" class="main__button">
+            Пройти тест
+          </button>
+        </div>
+        <p class="main__date">© 2024 PANDA AGENCY</p>
+      </div>
+    </main>
+
+    <main  class="main__mob">
+      <div class="section__leadpandaBg--bottom section__leadpandaBg--mob"></div>
+
+      <img src="./images/logo2.svg" alt="" />
+
+      <div>
+        <h2 class="main__subTitle main__subTitle--mob">
+          Boost Your Sales with Targeted Advertising from Lead Panda Agency!
+        </h2>
+
+        <p class="main__text main__text--mob">
+          Start receiving your first leads within the first 48 hours.
+        </p>
+      </div>
+
+      <button onclick="showQuiz1()" class="main__button main__button--mob">
+        Пройти тест
+      </button>
+
+      <p class="mob__privacy">
+        © 2024 LPA | All <br />
+        Rights Reserved. | PDPL
+      </p>
+    </main>
+
+    <section class="section quiz-1 q-common-parent hidden">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+
+      <div class="quizContainer">
+        <div class="quizBlock">
+          <img
+            src="./images/logoTextBlack.png"
+            alt="logoPanda"
+            class="quizBlock__image"
+          />
+          <h3 class="quizBlock__title q-uestion">Please enter your <br />company name</h3>
+          <div class="q-answer">
+            <input
+              type="text"
+              class="quiz__button quiz1__input"
+              placeholder="MyCompanyName"
+            />
+          </div>
+          <p class="quiz1__error">This field is required</p>
+        </div>
+        <div class="quizButtonNext q-later-button">
+          <button onclick="showQuiz2()" class="quizButtonNext__button">
+            Next question
+          </button>
+          <div class="quizButtonNext__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-2 q-common-parent hidden">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+
+      <div class="quizContainer">
+        <div class="quizBlock">
+          <img
+            src="./images/logoTextBlack.png"
+            alt="logoPanda"
+            class="quizBlock__image"
+          />
+          <h3 class="quizBlock__title quizBlock__title--quiz-2 q-uestion">
+            Specify the industry <br />of your company
+          </h3>
+          <div class="q-answer">
+            <input
+              type="text"
+              class="quiz__button quiz2__button"
+              placeholder="Сфера"
+            />
+          </div>
+        </div>
+        <div class="quizButtonNext q-later-button">
+          <button
+            id="buttonHide"
+            onclick="showQuiz3()"
+            class="quizButtonNext__button"
+          >
+            Next question
+          </button>
+          <div class="additionalBlock">
+            <p class="additionalBlock__title">
+              Do you want to leave the input field empty?
+            </p>
+            <div class="additionalBlock__buttons q-later-button">
+              <button
+                onclick="showQuiz3Add()"
+                class="additionalBlock__buttons--black"
+              >
+                Yes
+              </button>
+              <button
+                onclick="hideBlockButtons()"
+                class="additionalBlock__buttons--white"
+              >
+                No
+              </button>
+            </div>
+          </div>
+          <div class="quizButtonNext__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-3 q-common-parent">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+
+      <div class="quizContainer">
+        <div class="quizBlock">
+          <img
+            src="./images/logoTextBlack.png"
+            alt="logoPanda"
+            class="quizBlock__image"
+          />
+          <h3 class="quizBlock__title q-uestion">
+            What budget are you planning <br />to use for advertising?
+          </h3>
+          <div class="quizBlock__checkboxBlock">
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="radio"
+                name="rb3"
+                id="rb1"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb1"
+                >$500 - $2,000</label
+              >
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="radio"
+                name="rb3"
+                id="rb2"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb2"
+                >$2,000 - $5,000</label
+              >
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="radio"
+                name="rb3"
+                id="rb3"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb3"
+                >$5,000 - $15,000</label
+              >
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="radio"
+                name="rb3"
+                id="rb4"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb4"
+                >More than $15,000</label
+              >
+            </div>
+            <p class="quiz3__error">You need to select one of the options</p>
+          </div>
+        </div>
+        <div class="quizButtonNext quizButtonNext--quiz-3 q-later-button">
+          <button onclick="showQuiz4()" class="quizButtonNext__button">
+            Next question
+          </button>
+          <div class="quizButtonNext__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-4 q-common-parent hidden">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+
+      <div class="quizContainer">
+        <div class="quizBlock">
+          <img
+            src="./images/logoTextBlack.png"
+            alt="logoPanda"
+            class="quizBlock__image"
+          />
+          <h3 class="quizBlock__title q-uestion">
+            Insert a link to your <br />company website/page
+          </h3>
+
+          <div class="quizBlock__checkboxBlock">
+            <input
+              type="text"
+              class="quiz__button quiz__button-quiz-4 q-answer"
+              placeholder="Ссылка"
+              onfocus="clearRadioSelection()"
+            />
+            <div class="quizBlock__label quiz__button-quiz-4 q-answer">
+              <input
+                class="quizBlock__checkbox quiz4Ratio"
+                type="radio"
+                name="rb4"
+                id="rb5"
+              />
+              <label class="quizBlock__labelText" for="rb5"
+                >У меня нет сайта/страницы</label
+              >
+            </div>
+
+            <p class="quiz4__error">Fill in the field or select another option</p>
+          </div>
+        </div>
+        <div class="quizButtonNext q-later-button">
+          <button onclick="showQuiz5()" class="quizButtonNext__button">
+            Next question
+          </button>
+          <div class="quizButtonNext__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-5 q-common-parent hidden">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+    
+      <div class="quizContainer quizContainer__quiz-5">
+        <div class="quizBlock">
+          <img
+            src="./images/logoTextBlack.png"
+            alt="logoPanda"
+            class="quizBlock__image"
+          />
+          <h3 class="quizBlock__title q-uestion">
+            Which additional business services might you need?
+          </h3>
+          <div class="quizBlock__checkboxBlock">
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb11"
+                id="rb11"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb11">
+                Brand Book Creation
+              </label>
+            </div>
+    
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb12"
+                id="rb12"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb12">
+                Brand Identity Design
+              </label>
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb13"
+                id="rb13"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb13">
+                Website Design
+              </label>
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb14"
+                id="rb14"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb14">
+                Website Development
+              </label>
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb15"
+                id="rb15"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb15">
+                3D Motion Design (VFX Animation)
+              </label>
+            </div>
+            <div class="quizBlock__label">
+              <input
+                class="quizBlock__checkbox"
+                type="checkbox"
+                name="rb16"
+                id="rb16"
+              />
+              <label class="quizBlock__labelText q-answer" for="rb16">
+                None, I don’t need additional services
+              </label>
+            </div>
+            <p class="quiz5__error">You must select at least one of the options</p>
+          </div>
+        </div>
+        <div class="quizButtonNext quizButtonNext--quiz-3 q-later-button">
+          <button onclick="showQuizForm()" class="quizButtonNext__button">
+            Get a consultation
+          </button>
+          <div class="quizButtonNext__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quizForm">
+      <div class="section__leadpandaBg--bottom"></div>
+      <div class="section__leadpandaBg--top"></div>
+
+      <div class="quizContainer quizForm__container">
+        <div class="quizForm__block">
+          <div class="quizForm__rightBlock">
+            <div>
+              <img
+                class="quizForm__images"
+                src="./images/logoTextBlack.png"
+                alt="leadPandaAgency"
+              />
+            </div>
+
+            <div class="quizForm__textBlock">
+              <h2 class="quizForm__title">
+                Thank you for your responses! <br />
+                Please leave your contact details.
+              </h2>
+            </div>
+
+            <p class="quizForm__privacy quizForm__privacy--desk">
+              © 2015-2024 BAYKAR TECH | All Rights Reserved. | PDPL
+            </p>
+          </div>
+
+          <div class="quizForm__leftBlock">
+            <div class="leadFormContainer2 firstt"></div>
+
+            <p class="quizForm__privacy quizForm__privacy--mob">
+              © 2015-2024 BAYKAR TECH | All <br />
+              Rights Reserved. | PDPL
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/save-delay-answers.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <input
+      style="display: none"
+      id="token"
+      value="79F4615C-1795-F8EB-830A-A172A0E28831"
+    />
+    <input
+      style="display: none"
+      id="brand_uuid"
+      value="52855d335e44d5186b6d5c79e9f92db8"
+    />
+    <input style="display: none" id="password" value="ruGaz0169" />
+    <input
+      style="display: none"
+      id="referrer"
+      value="https://panda-lead.space/fb1/lpa_2/m1"
+    />
+    <input style="display: none" id="terms" value="true" />
+    <input style="display: none" id="offer_id" value="308" />
+    <input style="display: none" id="funnel" value="funnel" />
+    <input style="display: none" id="userLanguage" value="EN" />
+
+    <script>
+      const generalFormsConfiguration = {
+        thankYouPage: 'thank-you.html',
+        language: 'EN',
+        hideCountriesList: false,
+        withEmail: false,
+        splitForm: false,
+        withPhoneVerification: false,
+        phoneVerificationPlaceholderText: 'test test',
+        phoneVerificationSubmitText: 'test test',
+      };
+
+      const forms = [
+        {
+          headerText: 'BANKA GARANTİLİ YATIRIMLAR',
+          submitText: 'ücretsiz kayıt',
+          cssAdditionalClass: 'firstt',
+          unique_id_submit: '123456',
+          checkbox: true,
+          checkBoxContent: 'I accept the privacy policy',
+        },
+        {
+          headerText: '',
+          submitText: 'НАЧАТЬ РАБОТУ',
+          cssAdditionalClass: 'secondd',
+          checkbox: true,
+          checkBoxContent:
+            'Согласен с политикой конфиденциальности и соглашением',
+          unique_id_submit: '1234567',
+        },
+      ];
+    </script>
+    <script src="https://qqqq.uno/FormGlfin/newscripts/leadPandaFinalForm.js"></script>
+  </body>
+</html>

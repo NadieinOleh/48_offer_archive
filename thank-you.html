@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadPanda thank you</title>
+
+    <link rel="stylesheet" href="./fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/normolize.css" />
+    <link rel="stylesheet" href="./css/sectionQuiz.css" />
+    <link rel="stylesheet" href="./css/thank-you.css" />
+
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="quizContainer thank__container">
+        <div>
+          <img
+            class="thank__logo"
+            src="./images/logoTextBlack.png"
+            alt="logo panda"
+          />
+        </div>
+
+        <div>
+          <h1 class="thank__title">Дякуємо за звернення!</h1>
+          <p class="thank__text">
+            Ми з Вами обов’яково зв’яжемось найближчим часом!
+          </p>
+
+          <a href="./index.html"><button class="quizButtonNext__button thank__button">Go to website</button></a>
+          
+        </div>
+
+        <img class="thank__panda" src="./images/panda.png" alt="panda" />
+        <p class="thank__privacy">
+          © 2015-2024 BAYKAR TECH | All Rights Reserved. | PDPL
+        </p>
+      </div>
+    </section>
+
+    <script>
+      if (
+        sessionStorage.getItem('autologin') &&
+        sessionStorage.getItem('autologin') !== 'undefined'
+      ) {
+        // Установка интервала времени в миллисекундах (в данном случае 5000 миллисекунд = 5 секунд)
+        const interval = 4000;
+
+        // Ожидание загрузки документа
+        document.addEventListener('DOMContentLoaded', function () {
+          // Ожидание заданного интервала времени и перенаправление на другую страницу
+          setTimeout(function () {
+            window.location.href = sessionStorage.getItem('autologin');
+          }, interval);
+        });
+      }
+    </script>
+  </body>
+</html>

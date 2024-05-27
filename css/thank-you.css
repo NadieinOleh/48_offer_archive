@@ -1,0 +1,63 @@
+.thank__container {
+  padding: 26px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
+  .thank__container {
+    padding: 25px 30px 20px;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.thank__logo {
+  margin-bottom: 60px;
+}
+
+.thank__title {
+  color: #0b0b0b;
+
+  font-family: inherit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.thank__button {
+  margin: 0 auto;
+}
+
+.thank__text {
+  color: #0b0b0b;
+
+  text-align: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  margin-bottom: 15px;
+  max-width: 291px;
+  text-align: center;
+}
+.thank__panda {
+  width: 215.274px;
+  height: 214.877px;
+
+  margin-bottom: 80px;
+}
+.thank__privacy {
+  color: #0b0b0b;
+  font-family: inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 300% */
+}
